@@ -7,12 +7,13 @@ export const Container = styled.div`
   flex-wrap: wrap-reverse;
   padding-bottom: 40px;
   padding-top: 40px;
-  
+  z-index: 10;
 
   .picture-section img {
     width: 243px;
     height: 243px;
     border-radius: 50%;
+    border: 2px solid #21243d;
   }
 
   .apresentation-section {
@@ -53,12 +54,6 @@ export const Container = styled.div`
     .apresentation-section p {
       margin-bottom: 10px;
     }
-
-    .apresentation-section button {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      cursor: pointer;
-    }
   }
 `;
 
@@ -77,4 +72,16 @@ export const DownloadBtn = styled.button`
   font-weight: 400;
   background-color: #ff6464;
   margin-top: 47px;
+  transition: all ease 0.2s;
+
+  &:hover {
+    border: 1px solid #21243d;
+    border-radius: 0.5rem;
+  }
+
+  @media (max-width: 760px) {
+    margin-top: 8px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
 `;

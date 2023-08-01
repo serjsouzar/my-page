@@ -25,7 +25,7 @@ const Presentation = () => {
 
         <div className="picture-section">
           <img
-            src="https://i.imgur.com/hz8QYeh.gif"
+            src="https://imgur.com/P44MMVr.gif"
             alt="eusergio"
           />
           <div className="backgroundImg"></div>

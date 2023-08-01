@@ -1,25 +1,34 @@
 import "../styles/global.css";
+import StyledComponentsRegistry from "./registry";
 
 export const metadata = {
   title: "Sergio's Portifolio",
-  description: "This is my portifolio"
-}
+  description: "This is my portifolio",
+};
 
-const RootLayout = ({children}) => {
+const RootLayout = ({ children }) => {
   return (
     <html lang="en">
-      <head></head>
-      <body>
-        <div className="main">
-          <div className="gradient"/>
-        </div>
-
-        <main className="app">
-          {children}
-        </main>
-      </body>
+      <StyledComponentsRegistry>
+        <head></head>
+        <body>
+          <main
+            className="app"
+            style={{
+              backgroundImage: `url("/images/grid.svg")`,
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              width: "100vw",
+              height: "100vh",
+            }}
+          >
+            {children}
+          </main>
+        </body>
+      </StyledComponentsRegistry>
     </html>
-  )
-}
+  );
+};
 
-export default RootLayout
+export default RootLayout;

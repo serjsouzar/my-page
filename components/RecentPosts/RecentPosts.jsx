@@ -35,28 +35,30 @@ const RecentPosts = ({ repo }) => {
     <S.Container>
       <S.Header>
         <S.HeaderDiv1>
-          <h4>Recent posts</h4>
+          <h4>Recent projects</h4>
         </S.HeaderDiv1>
         <S.HeaderDiv2>
           <a href="https://github.com/serjsouzar">View all</a>
         </S.HeaderDiv2>
       </S.Header>
 
-      <a href="https://controle-de-financas-pi.vercel.app">
-        <S.PostField>
-          <S.Post>
+      <S.PostField>
+        <S.Post>
+          <a href="https://controle-de-financas-pi.vercel.app">
             <S.PostTitle>{repo1Name}</S.PostTitle>
             <span id="post1-data">{repo1UpdatedAt.slice(0, 10)}</span>
             <p id="post1-description">{repo1Desc}</p>
-          </S.Post>
+          </a>
+        </S.Post>
 
-          <S.Post>
-          <S.PostTitle>{repo2Name}</S.PostTitle>
+        <S.Post>
+          <a href="https://themerlinspotions.netlify.app/">
+            <S.PostTitle>{repo2Name}</S.PostTitle>
             <span id="post1-data">{repo2UpdatedAt.slice(0, 10)}</span>
             <p id="post1-description">{repo2Desc}</p>
-          </S.Post>
-        </S.PostField>
-      </a>
+          </a>
+        </S.Post>
+      </S.PostField>
     </S.Container>
   );
 };
