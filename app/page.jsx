@@ -1,24 +1,32 @@
+"use client";
+
 import Presentation from "@/components/Presentation/Presentation";
 import RecentPosts from "@/components/RecentPosts/RecentPosts";
+import { useEffect, useState } from "react";
 
-async function getRepos() {
-  const data = await fetch("https://api.github.com/users/serjsouzar/repos")
-  const repos = await data.json()
-  
-  return repos
-}
+const Home = () => {
+  const [repos, setRepos] = useState([]);
 
-
-const Home = async () => {
-
-  const repo = await getRepos()
+  useEffect(() => {
+    fetch("https://api.github.com/users/serjsouzar/repos")
+      .then((response) => response.json())
+      .then((data) => {
+        setRepos(data);
+      });
+  }, []);
 
   return (
     <>
+      {repos !== null ? (
+      <>
       <Presentation />
-      <RecentPosts repo={repo}/>
-    </>
-  );
-};
+      <RecentPosts repo={repos} />
+      </>
+    ) : (
+      <>
+      </>
+    )};
+      </>
+)};
 
 export default Home;
