@@ -1,7 +1,7 @@
 import React from "react";
-import { gsap } from "gsap";
+//import { gsap } from "gsap";
 import * as S from "./styles";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+//import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Work from "../Work/Work";
 
 const FeaturedWorks = ({ repo }) => {
@@ -27,7 +27,7 @@ const FeaturedWorks = ({ repo }) => {
     r.name === "MyFinance" ? (repo2HomePage = r.homepage) : "";
   });
 
-  gsap.registerPlugin(ScrollTrigger);
+/*   gsap.registerPlugin(ScrollTrigger);
   gsap.to(".featured-info", {
     scrollTrigger: {
       trigger: ".featured-info",
@@ -36,7 +36,7 @@ const FeaturedWorks = ({ repo }) => {
     xPercent: 50,
 
     duration: 5,
-  });
+  }); */
 
   return (
     <S.Container>
