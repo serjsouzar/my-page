@@ -1,5 +1,6 @@
 "use client";
 
+import FeaturedWorks from "@/components/FeaturedWorks/FeaturedWorks";
 import Presentation from "@/components/Presentation/Presentation";
 import RecentPosts from "@/components/RecentPosts/RecentPosts";
 import { useEffect, useState } from "react";
@@ -21,11 +22,12 @@ const Home = () => {
       <>
       <Presentation />
       <RecentPosts repo={repos} />
+      <FeaturedWorks />
       </>
     ) : (
       <>
       </>
-    )};
+    )}
       </>
 )};
 
