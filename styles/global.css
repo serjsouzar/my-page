@@ -2,12 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.main {
-  width: 100vw;
-  min-height: 100vh;
-  
-  background-image: url("/images/grid.svg");
-  background-size: cover;
-  
+.app {
+  width: auto;
 }
 
+.main {
+  background-image: url("/images/grid.svg");
+  background-size: cover;
+}

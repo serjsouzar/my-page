@@ -22,7 +22,7 @@ const Home = () => {
       <>
       <Presentation />
       <RecentPosts repo={repos} />
-      <FeaturedWorks />
+      <FeaturedWorks repo={repos}/>
       </>
     ) : (
       <>

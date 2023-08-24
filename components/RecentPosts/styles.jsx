@@ -4,6 +4,7 @@ export const Container = styled.div`
   background-color: #edf7fa;
   padding-bottom: 40px;
   max-width: 100%;
+  z-index: 5
 `;
 
 export const Header = styled.header`
@@ -12,6 +13,7 @@ export const Header = styled.header`
   justify-content: space-evenly;
   padding: 40px;
   max-width: 100%;
+  position: relative;
 `;
 
 export const HeaderDiv1 = styled.div`
@@ -68,8 +70,6 @@ export const Post = styled.div`
     border-radius: 0.5rem;
   }
 `;
-
-
 
 export const PostTitle = styled.h2`
   color: #21243d;
