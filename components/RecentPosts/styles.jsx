@@ -1,10 +1,18 @@
 import { styled } from "styled-components";
 
+//#edf7fa;
+
 export const Container = styled.div`
-  background-color: #edf7fa;
+/* From https://css.glass */
+/* From https://css.glass */
+background: rgba(3, 2, 57, 0.21);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.5px);
+-webkit-backdrop-filter: blur(8.5px);
+border: 1px solid rgba(3, 2, 57, 0.53);
   padding-bottom: 40px;
   max-width: 100%;
-  z-index: 5
+  z-index: 5;
 `;
 
 export const Header = styled.header`

@@ -2,8 +2,8 @@ import "../styles/global.css";
 import StyledComponentsRegistry from "./registry";
 
 export const metadata = {
-  title: "Sergio's Portifolio",
-  description: "This is my portifolio",
+  title: "Sergio's Page",
+  description: "This is my page",
 };
 
 const RootLayout = ({ children }) => {

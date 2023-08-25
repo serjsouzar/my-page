@@ -1,7 +1,7 @@
 import React from "react";
-//import { gsap } from "gsap";
+
 import * as S from "./styles";
-//import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import Work from "../Work/Work";
 
 const FeaturedWorks = ({ repo }) => {
@@ -15,33 +15,33 @@ const FeaturedWorks = ({ repo }) => {
   let repo2Desc;
   let repo2HomePage;
 
+  let repo3Name;
+  let repo3UpdatedAt;
+  let repo3Desc;
+  let repo3HomePage;
+
   repo.map((r) => {
-    r.name === "merlinpotions" ? (repo1Name = r.name) : "";
-    r.name === "merlinpotions" ? (repo1UpdatedAt = r.updated_at) : "";
-    r.name === "merlinpotions" ? (repo1Desc = r.description) : "";
-    r.name === "merlinpotions" ? (repo1HomePage = r.homepage) : "";
+    r.name === "promptopia" ? (repo1Name = r.name) : "";
+    r.name === "promptopia" ? (repo1UpdatedAt = r.updated_at) : "";
+    r.name === "promptopia" ? (repo1Desc = r.description) : "";
+    r.name === "promptopia" ? (repo1HomePage = r.homepage) : "";
 
-    r.name === "MyFinance" ? (repo2Name = r.name) : "";
-    r.name === "MyFinance" ? (repo2UpdatedAt = r.updated_at) : "";
-    r.name === "MyFinance" ? (repo2Desc = r.description) : "";
-    r.name === "MyFinance" ? (repo2HomePage = r.homepage) : "";
+    r.name === "los-angeles-mountains" ? (repo2Name = r.name) : "";
+    r.name === "los-angeles-mountains" ? (repo2UpdatedAt = r.updated_at) : "";
+    r.name === "los-angeles-mountains" ? (repo2Desc = r.description) : "";
+    r.name === "los-angeles-mountains" ? (repo2HomePage = r.homepage) : "";
+
+    r.name === "controle-de-financas" ? (repo3Name = r.name) : "";
+    r.name === "controle-de-financas" ? (repo3UpdatedAt = r.updated_at) : "";
+    r.name === "controle-de-financas" ? (repo3Desc = r.description) : "";
+    r.name === "controle-de-financas" ? (repo3HomePage = r.homepage) : "";
+
   });
-
-/*   gsap.registerPlugin(ScrollTrigger);
-  gsap.to(".featured-info", {
-    scrollTrigger: {
-      trigger: ".featured-info",
-      toggleActions: "restart pause none none",
-    },
-    xPercent: 50,
-
-    duration: 5,
-  }); */
 
   return (
     <S.Container>
       <S.Header>
-        <p>Featured Works</p>
+        <p>Others projects</p>
         <div></div>
       </S.Header>
 
@@ -51,18 +51,35 @@ const FeaturedWorks = ({ repo }) => {
         desc={repo1Desc}
         date={repo1UpdatedAt}
         homePage={repo1HomePage}
-        image={"/images/merlinpotions.png"}
+        image={"/images/promptopia.png"}
+        type={"Application"}
       />
+
       <div className="border_bottom">
         <div></div>
       </div>
+
       <Work
         className="featured-info"
         title={repo2Name}
         desc={repo2Desc}
         date={repo2UpdatedAt}
         homePage={repo2HomePage}
-        image={"/images/myfinance.png"}
+        image={"/images/los-angeles-mountains.png"}
+        type={"Landing Page"}
+      />
+      <div className="border_bottom">
+        <div></div>
+      </div>
+
+      <Work
+        className="featured-info"
+        title={repo3Name}
+        desc={repo3Desc}
+        date={repo3UpdatedAt}
+        homePage={repo3HomePage}
+        image={"/images/controle-de-financas.png"}
+        type={"Application"}
       />
       <div className="border_bottom">
         <div></div>

@@ -34,9 +34,15 @@ export const FeaturedInfo = styled.div`
 
   
 
-  .post1Img {
+  .postImg {
     border-radius: 8px;
     border: 2px solid #21243d;
+  }
+
+  @media (max-width: 760px) {
+    .postImg {
+    display: none;
+  }
   }
 `;
 

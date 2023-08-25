@@ -38,4 +38,15 @@ export const Header = styled.header`
   div {
     width: 355px;
   }
+
+  @media (max-width: 760px) {
+     p {
+     width: 100%;
+     text-align: center;
+  }
+
+  div {
+    width: 0px;
+  }
+  }
 `;
